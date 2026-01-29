@@ -12,6 +12,8 @@ A powerful malware research and forensics tool for comprehensive file type detec
 ![Platform](https://img.shields.io/badge/Platform-Windows-blue.svg)
 
 ---
+Files don't lie. Extensions do
+
 
 ## ✨ Features
 
