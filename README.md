@@ -218,7 +218,7 @@ Prevents Windows MAX_PATH errors by truncating folder names to 100 characters.
 
 ## 🎨 User Interface
 
-### Banner (Neon Cyberpunk Theme)
+### Banner 
 ```
 ╔══════════════════════════════════════════════════════════════════════════╗
 ║                                                                          ║
