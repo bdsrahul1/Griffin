@@ -1,10 +1,13 @@
 # 🛡️ GRIFFIN File Analyzer
 
+<div align="center">
+  <img src="https://raw.githubusercontent.com/bdsrahul1/Griffin/main/griffin_1.jpg" alt="GRIFFIN File Analyzer" width="800">
+</div>
+
 **Guardian of File Integrity & Type Analysis**
 
 A powerful malware research and forensics tool for comprehensive file type detection, hash calculation, and intelligent file organization. Built for security analysts, incident responders, and malware researchers.
 
-![Python](https://img.shields.io/badge/Python-3.6+-blue.svg)
 ![License](https://img.shields.io/badge/License-MIT-green.svg)
 ![Platform](https://img.shields.io/badge/Platform-Windows-blue.svg)
 
@@ -42,7 +45,6 @@ A powerful malware research and forensics tool for comprehensive file type detec
 
 ## 🚀 Quick Start
 
-### Standalone EXE (Windows)
 ```bash
 # Download GRIFFIN_FileAnalyzer.exe
 # No installation required - works on any Windows machine
@@ -50,32 +52,15 @@ A powerful malware research and forensics tool for comprehensive file type detec
 GRIFFIN_FileAnalyzer.exe C:\path\to\analyze
 ```
 
-### Python Script (All Platforms)
-```bash
-# Install dependencies
-pip install pandas openpyxl python-magic-bin
-
-# Run analysis
-python file_type_analyzer.py /path/to/analyze
-```
-
 ---
 
 ## 📦 Installation
 
-### Option 1: Standalone Executable (Windows Only)
 1. Download `GRIFFIN_FileAnalyzer.exe` from [Releases](../../releases)
 2. Run directly - no Python installation needed
 3. Size: ~50 MB (all dependencies bundled)
 
-### Option 2: Python Script (Cross-Platform)
-
-**Prerequisites:**
-- Python 3.6 or higher
-- pip package manager
-
-
-
+**That's it!** No dependencies, no setup, just download and run.
 
 ---
 
@@ -84,19 +69,19 @@ python file_type_analyzer.py /path/to/analyze
 ### 1️⃣ Basic Analysis (Read-Only)
 Generate Excel report with file types and SHA256 hashes.
 ```bash
-python file_type_analyzer.py C:\Samples
+GRIFFIN_FileAnalyzer.exe C:\Samples
 ```
 **Output:** `file_analysis_20260128_205623.xlsx`
 
 ### 2️⃣ Custom Output Location
 ```bash
-python file_type_analyzer.py C:\Samples --output C:\Reports\malware_analysis.xlsx
+GRIFFIN_FileAnalyzer.exe C:\Samples --output C:\Reports\malware_analysis.xlsx
 ```
 
 ### 3️⃣ Organize Files (Move Mode - Fast)
 Sort files into type-based folders after analysis.
 ```bash
-python file_type_analyzer.py C:\Samples --organize
+GRIFFIN_FileAnalyzer.exe C:\Samples --organize
 ```
 **Result:**
 ```
@@ -111,24 +96,24 @@ C:\Samples_organized\
 ### 4️⃣ Organize with Copy (Safe Mode)
 Preserve original files while creating organized copies.
 ```bash
-python file_type_analyzer.py C:\Samples --organize --mode copy
+GRIFFIN_FileAnalyzer.exe C:\Samples --organize --mode copy
 ```
 
 ### 5️⃣ Custom Organization Directory
 ```bash
-python file_type_analyzer.py C:\Samples --organize --organize-dir C:\Sorted
+GRIFFIN_FileAnalyzer.exe C:\Samples --organize --organize-dir C:\Sorted
 ```
 
 ### 6️⃣ Flatten Directory Structure
 Remove subdirectories and place all files directly in type folders.
 ```bash
-python file_type_analyzer.py C:\Samples --organize --flatten
+GRIFFIN_FileAnalyzer.exe C:\Samples --organize --flatten
 ```
 
 ### 7️⃣ Speed Mode (Large Datasets)
 Minimal output with progress bar for processing thousands of files.
 ```bash
-python file_type_analyzer.py C:\Samples --organize --speed
+GRIFFIN_FileAnalyzer.exe C:\Samples --organize --speed
 ```
 **Output:**
 ```
@@ -137,7 +122,7 @@ Progress: [▓▓▓▓▓▓▓▓▒▒] 82.5% | 3,245/3,932 files
 
 ### 8️⃣ Automated Processing (No Confirmation)
 ```bash
-python file_type_analyzer.py C:\Samples --organize --no-confirm --speed
+GRIFFIN_FileAnalyzer.exe C:\Samples --organize --no-confirm --speed
 ```
 ⚠️ **Caution:** Skips confirmation prompts - use for scripting/automation only!
 
@@ -275,12 +260,6 @@ Progress: [▓▓▓▓▓▓▓▓▒▒] 82.5% | 3,245/3,932 files
 
 ## 🐛 Troubleshooting
 
-### Issue: "ModuleNotFoundError: No module named 'magic'"
-**Solution:**
-```bash
-pip install python-magic-bin
-```
-
 ### Issue: "Failed to execute script" on EXE
 **Solution:** Download the latest release build (already fixed)
 
@@ -317,10 +296,10 @@ Contributions welcome! Please:
 
 ## ⭐ Acknowledgments
 
-- Built with [python-magic](https://github.com/ahupp/python-magic) for file type detection
-- [pandas](https://pandas.pydata.org/) for data processing
-- [openpyxl](https://openpyxl.readthedocs.io/) for Excel report generation
-- [PyInstaller](https://pyinstaller.org/) for standalone executable packaging
+- Built with python-magic for file type detection
+- pandas for data processing
+- openpyxl for Excel report generation
+- PyInstaller for standalone executable packaging
 
 ---
 
